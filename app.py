@@ -11,10 +11,8 @@ class LabsWindow(QMainWindow):
         super().__init__()
         self._last_lab_num = None
         uic.loadUi(resolve_path('ui/window.ui'), self)
-        # self.labSelect.currentIndexChanged.connect(self.on_lab_selected)
         self.taskSelect.currentIndexChanged.connect(self.on_task_selected)
         self.on_lab_selected()
-        # self.labSelect.addItems(list(map(lambda x: f"{x}. {lab_names[x]}", labs)))
     
     def on_lab_selected(self):
         lab_num = 6
